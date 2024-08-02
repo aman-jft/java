@@ -1,3 +1,47 @@
-bin/
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IntelliJ IDEA log files
+idea.log
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://stackoverflow.com/questions/2497070/how-to-remove-multiple-modules-from-a-maven-repo-local
+# Locally installed dependencies and plug-ins
+repository/
+
+# Gradle
+.gradle/
+build/
+
+# Working files
+*.swp
+*~
+.idea/
+out/
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Classpath file
 .classpath
+
+# Eclipse files
 .project
+.settings/

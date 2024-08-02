@@ -8,7 +8,7 @@ public class LambdaTest {
 
 	public static void main(String[] args) {
 		System.out.println("Hello!");
-		// grouping1();
+		grouping1();
 		 grouping2();
 		//grouping3();
 		 grouping4();
@@ -41,8 +41,8 @@ public class LambdaTest {
 		List<User> users = User.mock(20);
 		Map<String, Long> collect = users.stream().collect(
 				Collectors.groupingBy(User::getDept, Collectors.mapping(User::getName, Collectors.counting())));
-		//collect.entrySet().stream().sorted(Map.Entry.comparingByKey().reversed()).forEach((e) -> System.out.println(String.format("%s:%s", e.getKey(), e.getValue())));
-		collect.entrySet().stream().sorted(Map.Entry.comparingByValue())
+//		collect.entrySet().stream().sorted(Map.Entry.comparingByKey().reversed()).forEach((e) -> System.out.println(String.format("%s:%s", e.getKey(), e.getValue())));
+		collect.entrySet().stream().sorted(Map.Entry.comparingByKey())
 		.forEach((e) -> System.out.println(String.format("%s:%s", e.getKey(), e.getValue())));
 		//collect.forEach((k, v) -> System.out.println(String.format("%s:%s", k, v)));
 	}
