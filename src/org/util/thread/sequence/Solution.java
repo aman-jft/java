@@ -29,10 +29,18 @@ public class Solution {
 	private static Runnable even = () -> {
 		while (i < 10) {
 			synchronized (lock) {
-				if (i % 2 == 0) {
-					System.out.println(i++);
-					lock.notifyAll();
-				} else {
+//				if (i % 2 == 0) {
+//					System.out.println(i++);
+//					lock.notifyAll();
+//				} else {
+//					try {
+//						lock.wait();
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+				while(i % 2 != 0) {
 					try {
 						lock.wait();
 					} catch (InterruptedException e) {
@@ -40,6 +48,8 @@ public class Solution {
 						e.printStackTrace();
 					}
 				}
+				System.out.println(i++);
+				lock.notifyAll();
 			}
 		}
 	};

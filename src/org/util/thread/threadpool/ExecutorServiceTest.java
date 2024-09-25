@@ -1,4 +1,4 @@
-package org.util.thread.threadlocal;
+package org.util.thread.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,6 +15,6 @@ public class ExecutorServiceTest {
         }
 
         // Shutdown the executor service
-        //executorService.shutdown();
+        executorService.shutdown();
     }
 }
